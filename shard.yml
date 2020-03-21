@@ -6,6 +6,6 @@ authors:
 
 description: Add support to Hash for deep merges
 
-crystal: 0.26.0
+crystal: 0.33.0
 
 license: MIT

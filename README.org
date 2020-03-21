@@ -12,17 +12,17 @@ Adds support for deep merges to =Hash=
   => { "a" => { "b" => 4, "c" => true } }
 #+END_SRC
 
-** Installation
+* Installation
 
 Add it to =shards.yml= in your project:
 
 #+BEGIN_SRC yaml
   dependencies:
     deep-merge:
-      github: peterhoeg/deep-merge.cr
+      gitlab: peterhoeg/deep-merge.cr
 #+END_SRC
 
-** Usage
+* Usage
 
 #+BEGIN_SRC crystal
 require "deep-merge"
@@ -39,7 +39,7 @@ require "deep-merge"
 #+END_SRC
  - [ ] arrays of Hashes
 
-** Development / Contributing
+* Development / Contributing
 
 1. Fork it (<https://github.com/peterhoeg/deep-merge/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
@@ -47,6 +47,6 @@ require "deep-merge"
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Merge Request
 
-** Contributors
+* Contributors
 
 - [[https://github.com/peterhoeg][peterhoeg]] Peter Hoeg - creator, maintainer
