@@ -1,4 +1,5 @@
 * deep-merge
+[[https://github.com/peterhoeg/deep-merge.cr/workflows/Crystal%20CI/badge.svg]]
 
 Adds support for deep merges to =Hash=
 
