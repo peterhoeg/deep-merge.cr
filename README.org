@@ -28,7 +28,7 @@ Add it to =shards.yml= in your project:
 require "deep-merge"
 #+END_SRC
 
-=Hash= is now monkey-patched to support a =.deep-merge= instance method.
+=Hash= is now monkey-patched to support =.deep_merge= and =.deep_merge!= instance methods.
 
 ** TODO Add support for:
 
