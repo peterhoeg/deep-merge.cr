@@ -1,4 +1,4 @@
-class Hash(K, V)
+module DeepMerge(K, V)
   def deep_merge(other : Hash(L, W)) forall L, W
     target = Hash(K | L, V | W).new
     target.merge! self
@@ -26,25 +26,10 @@ class Hash(K, V)
   end
 
   def deep_merge!(other : Hash(L, W)) forall L, W
-    other.keys.each do |key|
-      # keys only in other
-      if !self[key]?
-        self[key] = other[key]
-        next
-      end
-
-      # merge if both are hashes
-      me = self[key]
-      them = other[key]
-      if me.is_a?(Hash) && them.is_a?(Hash)
-        self[key] = me.deep_merge!(them)
-        next
-      end
-
-      # otherwise take from other
-      self[key] = other[key]
-    end
-
-    self
+    self.merge! deep_merge(other)
   end
+end
+
+class Hash(K, V)
+  include DeepMerge(K, V)
 end
